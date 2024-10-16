@@ -18,10 +18,10 @@
                     <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">About Us <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="#about">About Us <span class="sr-only">(current)</span></a>
                 </li>
                 <li class="nav-item active">
-                    <a class="nav-link" href="#">Contact Us</a>
+                    <a class="nav-link" href="#contact">Contact Us</a>
                 </li>
                 
                 </ul>
@@ -35,17 +35,69 @@
 
             </div>
         </nav>
+        <style>
+            #homeText {
+                position:absolute;
+                width:300px;
+                height:300px;
+                /* background:#063; */
+                bottom:200px;
+                border: 10cap;
+                border-color: aliceblue;
+                left:20%;
+                margin-left:-150px;
+            }
+          </style>
         <!-- main banner -->
         <section class="bgimage" id="home">
             <div class="container-fluid">
                 <div class="row">
-                <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
+                <div id='homeText' class="col-lg-12 col-md-12 col-sm-12 col-xs-12 hero-text">
                     <h2 class="hero_title">Hi, it's me Abeal</h2>
                     <p class="hero_desc">I am a recent computer science grad in Denver</p>
                 </div>
                 </div>
             </div>
         </section>
+        <!-- about section-->
+        <section id="about">
+            <div class="container mt-4 pt-4">
+                <h1 class="text-center">About Me</h1>
+                <div class="row mt-4">
+                    <div class="col-lg-4">
+                        <img src="images/about.jpeg" class= "imageAboutPage" alt="">
+                    </div>
+
+                    <div class="col-lg-8">
+                        <p> I am a recent grad from the University of Colorado at Boulder. I double majored in Computer Science and Economics, with a quantitative emphasis in my economics major.
+                            I am eager to get my career started as a software engineer. I am interested in a broad range of work: mobile development, back-end, full-stack, embedded programming, web development, front end, and much more.
+                            
+                        </p>
+                    </div>
+                </div>
+        </section>
+        
+        <section id="contact">
+            <div class="container mt-3 contactContent">
+                <h1 class="text-center">Contact Me</h1>
+        
+                <div class="row mt-4">
+                    <div class="col-lg-6">
+                        <!-- to edit google map goto https://www.embed-map.com type your location, generate html code and copy the html  -->
+                        <!-- contact section-->
+            <section id="contact">
+                <div class="container mt-3 contactContent">
+                    <h4 style ="text-align: center;"> My email address is: [myfirstnamemylastname]@gmail.com (Nospaces/dots, just first and last names right next to eachother) </h4>
+
+                </div>
+            </section>
+                            
+                        </div>
+                    </div>
+        
+                </div>
+            </div>
+
 
     </body>
 </html>
