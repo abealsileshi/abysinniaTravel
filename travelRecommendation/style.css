@@ -17,3 +17,28 @@
     position: absolute;
     color: white;
 }
+
+.searchDiv
+{
+		height:440px;
+		width:415px;
+		/* background-color:#CCC; */		
+        overflow-y:auto;
+		float:left;
+		position:relative;
+		margin-left:-5px;
+}
+
+.left-element {
+    
+    background: white;
+    display: inline-block;
+    float: left;
+}
+
+.right-element {
+    height: auto;
+    background: black;
+    display: inline-block;
+    float: right;
+}
