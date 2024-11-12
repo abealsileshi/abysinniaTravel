@@ -5,8 +5,6 @@
 //https://stackoverflow.com/questions/72434338/using-node-fetch-in-js-file-in-browser-and-in-node
 
 
-//container.append(el);
-
 /* use this to scroll when making a div
 style="overflow-y:scroll;"
 */
@@ -19,6 +17,7 @@ if (!fetch && process?.versions?.node) {
 
 console.log(fetch);
 
+//search query stored in this variable
 var squery;
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -27,13 +26,14 @@ document.addEventListener('DOMContentLoaded', () => {
     event.preventDefault(); // Prevent form submission
     console.log('Made it Abeal');
     
-   
+   //search query captures value
     squery = document.querySelector('input[type=search]').value;
     
     // Pass a callback function to fetchJSONData
     fetchJSONData(handleApiData);
   });
 
+  //clear button functionalities
   const clearButton = document.querySelector('button[type="reset"]');
   clearButton.addEventListener('click', (event) => {
      //clear previous search results
@@ -86,28 +86,68 @@ function handleApiData(data) {
     console.log('urls', data[1].cities[0].imageUrl)
 
     var img1 = document.createElement("img");
-    //img1.style.height = 'auto';
+    var text1 = document.createElement('p')
+   
     var img2 = document.createElement("img");
+    var text2 = document.createElement('p')
+
     var img3 = document.createElement("img");
+    var text3 = document.createElement('p')
+
     var img4 = document.createElement("img");
+    var text4 = document.createElement('p')
+
     var img5 = document.createElement("img");
+    var text5 = document.createElement('p')
+
     var img6 = document.createElement("img");
+    var text6 = document.createElement('p')
+
     //australia entries (sydney, melbourne)
     img1.src = data[0].cities[0].imageUrl
+    text1.innerText = data[0].cities[0].description
+    text1.style.color = 'white'
+
     img2.src = data[0].cities[1].imageUrl
+    text2.innerText = data[0].cities[1].description
+    text2.style.color = 'white'
+
     //japan images (tokyo, kyoto)
     img3.src = data[1].cities[0].imageUrl
+    text3.innerText = data[1].cities[0].description
+    text3.style.color = 'white'
+
     img4.src = data[1].cities[1].imageUrl
+    text4.innerText = data[1].cities[1].description
+    text4.style.color = 'white'
+
+
     // //japan brazil (rio, saopaulo)
     img5.src = data[2].cities[0].imageUrl
+    text5.innerText = data[2].cities[0].description
+    text5.style.color = 'white'
+
     img6.src = data[2].cities[1].imageUrl
+    text6.innerText = data[2].cities[1].description
+    text6.style.color = 'white'
 
     el.appendChild(img1)
+    el.appendChild(text1)
+
     el.appendChild(img2)
+    el.appendChild(text2)
+    
     el.appendChild(img3)
+    el.appendChild(text3)
+
     el.appendChild(img4)
+    el.appendChild(text4)
+
     el.appendChild(img5)
+    el.appendChild(text5)
+
     el.appendChild(img6)
+    el.appendChild(text6)
     container.appendChild(el)
   }
   if(squery == 'temples' || squery.includes('temple')){
@@ -115,12 +155,26 @@ function handleApiData(data) {
     console.log('look at temple data', data )
 
     var img1 = document.createElement("img");
+    var text1 = document.createElement('p')
+    text1.innerText = data[0].description;
+    text1.style.color = 'white'
+
     img1.src = data[0].imageUrl;
+
     el.appendChild(img1)
+    el.appendChild(text1)
+
     
     var img2 = document.createElement("img");
+    var text2 = document.createElement('p')
+    text2.innerText = data[1].description;
+    text2.style.color = 'white'
+
+
     img2.src = data[1].imageUrl;
     el.appendChild(img2)
+    el.appendChild(text2)
+
     container.appendChild(el)
   }
 

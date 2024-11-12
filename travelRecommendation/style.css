@@ -42,3 +42,10 @@
     display: inline-block;
     float: right;
 }
+
+
+/*css for the images from api */
+.bgimage img {
+    width: 500px;
+    height: auto;
+}
