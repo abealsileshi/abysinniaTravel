@@ -9,14 +9,6 @@
 style="overflow-y:scroll;"
 */
 
-let fetch = globalThis?.fetch;
-
-if (!fetch && process?.versions?.node) {
-  fetch = (await import('node-fetch')).default;
-}
-
-console.log(fetch);
-
 //search query stored in this variable
 var squery;
 
@@ -180,7 +172,7 @@ function handleApiData(data) {
 
 }
 
-export function fetchJSONData(callback) {
+function fetchJSONData(callback) {
   fetch('travel_recommendation_api.json')
     .then(response => {
       if (!response.ok) {
