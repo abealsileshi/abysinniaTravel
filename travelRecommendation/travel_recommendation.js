@@ -181,7 +181,7 @@ function handleApiData(data) {
 }
 
 export function fetchJSONData(callback) {
-  fetch('http://127.0.0.1:5500/travelRecommendation/travel_recommendation_api.json')
+  fetch('travel_recommendation_api.json')
     .then(response => {
       if (!response.ok) {
         throw new Error("Failed with HTTP code " + response.status);
